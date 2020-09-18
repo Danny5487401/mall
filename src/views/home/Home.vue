@@ -1,9 +1,18 @@
 <template>
-  <h2>首页</h2>
+  <div id="home">
+    <HomeSwiper></HomeSwiper>
+  </div>
 </template>
 
+
 <script>
-export default {};
+import HomeSwiper from "./childComps/HomeSwiper";
+export default {
+  name: "home",
+  components: {
+    HomeSwiper,
+  },
+};
 </script>
 
 <style>

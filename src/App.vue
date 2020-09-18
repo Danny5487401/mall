@@ -12,4 +12,6 @@ export default {
 </script>
 
 <style>
+/* 全局样式 */
+@import "assets/css/base.css";
 </style>
