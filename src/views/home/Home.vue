@@ -5,9 +5,9 @@
         <div>电影节</div>
       </template>
     </nav-bar>
-    <scroll class="content">
+    <div class="content">
       <HomeSwiper></HomeSwiper>
-    </scroll>
+    </div>
   </div>
 </template>
 
