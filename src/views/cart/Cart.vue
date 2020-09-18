@@ -1,9 +1,21 @@
 <template>
-  <h2>购物车</h2>
+  <div id="cart">
+    <nav-bar class="home-nav">
+      <template v-slot:center>
+        <div>购物车</div>
+      </template>
+    </nav-bar>
+  </div>
 </template>
 
 <script>
-export default {};
+import NavBar from "components/common/navbar/NavBar";
+export default {
+  name: "Cart",
+  components: {
+    NavBar,
+  },
+};
 </script>
 
 <style>
