@@ -6,7 +6,7 @@
       </template>
     </nav-bar>
     <div class="content">
-      <HomeSwiper></HomeSwiper>
+      <HomeSwiper :banners="banners"></HomeSwiper>
     </div>
   </div>
 </template>
@@ -17,12 +17,34 @@ import HomeSwiper from "./childComps/HomeSwiper";
 
 import NavBar from "components/common/navbar/NavBar";
 
+import {getHomeMultidata} from 'network/home'
+
 export default {
   name: "home",
   components: {
     HomeSwiper,
     NavBar,
   },
+  created(){
+    //1.获取首页多个数据
+    this.getHomeMultidata()
+    
+  },
+  data(){
+    return {
+      banners:[],
+      recommends:[],
+    }
+  },
+  methods:{
+    getHomeMultidata (){
+      getHomeMultidata().then(res => {
+          console.log(res)
+          this.banners = res.data.banner.list;
+          this.recommends = res.data.recommend.list;
+    }
+  )
+    }}
 };
 </script>
 
