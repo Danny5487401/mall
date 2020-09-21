@@ -7,6 +7,7 @@
     </nav-bar>
     <div class="content">
       <HomeSwiper :banners="banners"></HomeSwiper>
+      <recommend-view :recommends = "recommends"></recommend-view>
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@
 
 <script>
 import HomeSwiper from "./childComps/HomeSwiper";
+import RecommendView from "./childComps/recommendView"
 
 import NavBar from "components/common/navbar/NavBar";
 
@@ -24,6 +26,7 @@ export default {
   components: {
     HomeSwiper,
     NavBar,
+    RecommendView
   },
   created(){
     //1.获取首页多个数据
